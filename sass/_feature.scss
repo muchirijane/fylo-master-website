@@ -1,0 +1,113 @@
+.feature{
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+
+    background-image:linear-gradient(to right, rgba($color-Light-Grayish-Blue, .6), rgba($color-Light-Grayish-Blue, .6)) ,url(../img/bg-curve-desktop.svg);
+
+    padding: 7rem 4rem;
+
+    @media only screen and (max-width: $bp-md-lap){
+        display: flex;
+       flex-direction: column-reverse;
+       text-align: center;
+    }
+
+
+    &__detail{
+        margin-right: 3rem;
+
+        @media only screen and (max-width: $bp-md-lap){
+            margin-top: 6rem;
+        }
+
+    }
+
+    &__title{
+        font-size: 3rem;
+        padding-bottom: 3rem;
+
+    }
+
+    &__text{
+
+        &:not(:last-child){
+            padding-bottom: 2rem;
+        }
+
+    }
+
+
+    &__photo{
+        height: 30rem;
+    }
+   
+}
+
+.btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: $color-Moderate-Cyan;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 1rem;
+
+    
+}
+
+.testimonial{
+
+    &__content{
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(#000, .2);
+        padding: 3rem;
+        border-radius: 1rem;
+        margin: 5rem 15rem 5rem 0;
+
+        @media only screen and (max-width: $bp-lg-tab){
+            margin: auto;
+            margin-top: 3rem;
+            text-align: initial;
+        }
+
+    }
+
+    &__quote{
+
+    }
+
+    &__text{
+
+    }
+
+    &__profile{
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+
+    }
+
+    &__img{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+
+    }
+
+    &__detail{
+        margin-left: 3rem;
+
+    }
+
+    &__name{
+
+    }
+
+    &__title{
+
+    }
+}

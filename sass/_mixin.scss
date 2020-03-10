@@ -1,0 +1,32 @@
+@mixin input($padding) {
+    padding: $padding;
+    outline: none;
+    border: 1px solid $color-Dark-Blue;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    margin-right: 2rem; 
+    border-radius: 4px;
+     
+}
+
+@mixin cta($padding) {
+    outline: none;
+    border: none;
+    background-color: $color-Bright-Blue;
+    padding: $padding;
+    border-radius: 2px;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(#000, .2);
+    transition: all .2s;
+    border-radius: 3px;
+
+    &:hover{
+        transform: translateY(-2px);
+        background-color:$color-Dark-Blue;
+    }
+
+    &:active{
+        transform: translateY(2px);
+    }
+}
+

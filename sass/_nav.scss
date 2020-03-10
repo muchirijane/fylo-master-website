@@ -1,0 +1,45 @@
+.nav{
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+    @media only screen and (max-width: $bp-md-lap){
+        padding: 3rem;
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 1.5rem;
+        justify-items: end;
+    }
+
+    &__list{
+        list-style: none;
+
+    }
+
+    &__link:link,
+    &__link:visited{
+        text-decoration: none;
+        color: $color-Desaturated-Blue;
+        transition: all .2s;
+
+        &:hover{
+            color: $color-Dark-Blue;
+            border-bottom: 1px solid $color-Dark-Blue;
+            padding-bottom: .5rem;
+        }
+
+    }
+
+}
+.logo{
+    @media only screen and (max-width: $bp-md-tab){
+        height: 5rem;
+    }
+    @media only screen and (max-width: $bp-sm-tab){
+        height: 4rem;
+    }
+}

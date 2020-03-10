@@ -1,0 +1,92 @@
+.signup{
+  grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+
+    background-color: $color-Desaturated-Blue;
+    color: #fff;
+
+    height: 40rem;
+    padding: 0 4rem;
+
+    @media only screen and (max-width: $bp-md-lap){
+      display: flex;
+     flex-direction: column;
+      padding: 5rem 6rem;
+    }
+    @media only screen and (max-width: $bp-mobile){
+      padding: 2rem 6rem;
+    }
+
+
+    
+    &__detail{
+      margin-right: 6rem;
+
+    }
+
+    &__title{
+      color: #fff;
+      font-size: 3rem;
+      padding-bottom: 2rem;
+
+
+    }
+
+    &__text{
+
+
+    }
+
+    &__item{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @media only screen and (max-width: $bp-md-lap){
+        display: flex;
+        flex-direction: row;
+        padding: 0 6rem;
+        padding-top: 5rem;
+      }
+      @media only screen and (max-width: $bp-md-tab){
+        padding: 5rem 2rem;
+      }
+      @media only screen and (max-width: $bp-sm-tab){
+        display: flex;
+        flex-direction: column;
+      }
+      @media only screen and (max-width: $bp-sm-tab){
+        padding: 0 6rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+
+    }
+
+    &__input{
+      @include input($padding: 1.5rem 25rem 1.5rem 1rem);
+      margin-bottom: 2rem;
+
+      @media only screen and (max-width: $bp-md-lap){
+        @include input($padding: 1.5rem 20rem 1.5rem 1rem);
+        margin-right: 3rem;
+      }
+      @media only screen and (max-width: $bp-md-tab){
+        @include input($padding: 1.5rem 10rem 1.5rem 1rem);
+        margin-right: 3rem;
+      }
+
+    }
+
+    &__cta{
+      @include cta($padding:1.5rem 4rem);
+
+      @media only screen and (max-width: $bp-md-tab){
+        @include cta($padding:1.5rem 2rem);
+      }
+    }
+}

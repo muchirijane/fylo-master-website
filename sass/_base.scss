@@ -1,0 +1,67 @@
+//COLORS
+
+ $color-Dark-Blue: hsl(243, 87%, 12%);
+ $color-Desaturated-Blue: hsl(238, 22%, 44%);
+
+ $color-Bright-Blue: hsl(224, 93%, 58%);
+ $color-Moderate-Cyan: hsl(170, 45%, 43%);
+ 
+ 
+ 
+ $color-Light-Grayish-Blue: hsl(240, 75%, 98%);
+ $color-Light-Gray: hsl(0, 0%, 75%);
+
+//Breaking points
+$bp-lg-lap: 75em;  //1200px
+$bp-md-lap: 62.5em;  //1000px
+$bp-lg-tab: 56.25em;  //900px
+$bp-md-tab: 50em;  // 800px
+$bp-sm-tab: 37.5em; //600px
+$bp-mobile: 23.45em;
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-lg-lap){
+       font-size: 56%;
+    }
+    @media only screen and (max-width: $bp-md-lap){
+        font-size: 53%;
+    }
+    @media only screen and (max-width: $bp-sm-tab){
+        font-size: 48%;
+    }
+    @media only screen and (max-width: $bp-mobile){
+        font-size: 40%;
+    }
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.container{
+    padding: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    @media only screen and (max-width: $bp-md-lap){
+        padding: 0;
+        padding-top: 4rem;
+    }
+}

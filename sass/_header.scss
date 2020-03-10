@@ -1,0 +1,69 @@
+.header{
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    padding: 10rem 4rem;
+
+    @media only screen and (max-width: $bp-lg-lap){
+        padding: 10rem 2rem;
+     }
+     @media only screen and (max-width: $bp-md-lap){
+        display: flex;
+       flex-direction: column-reverse;
+       text-align: center;
+    }
+    @media only screen and (max-width: $bp-sm-tab){
+        padding: 0rem 3rem;
+    }
+
+    &__title{
+        @media only screen and (max-width: $bp-md-lap){
+            font-size: 4rem;
+        }
+    }
+
+
+    &__text{
+        padding-bottom: 2rem;
+        font-size: 2rem;
+
+        @media only screen and (max-width: $bp-md-lap){
+            padding-right: 3rem;
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-md-lap){
+            font-size: 2rem;
+        }
+        
+    }
+
+    &__input{
+        @media only screen and (max-width: $bp-sm-tab){
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
+
+    &__photo{
+        height: 38rem;
+
+        @media only screen and (max-width: $bp-md-lap){
+            height: 35rem;
+         }
+    }
+}
+
+
+.input{
+    @include input($padding: 1.5rem 15rem 1.5rem 1rem);
+
+}
+
+.cta{
+    @include cta($padding:1.5rem 6rem);
+}
